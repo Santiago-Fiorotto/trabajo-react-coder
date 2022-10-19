@@ -30,3 +30,13 @@
   font-size: 50px;
   justify-content: center;
 }
+
+/* GREETING */
+.greeting {
+  font-size: 40px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  font-family: cursive;
+}
