@@ -40,3 +40,12 @@
   margin-top: 15px;
   font-family: cursive;
 }
+
+/* CONTADOR */
+
+.contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
