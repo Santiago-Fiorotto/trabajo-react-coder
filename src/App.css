@@ -48,4 +48,14 @@
   justify-content: center;
   align-items: center;
   min-height: 80px;
+  font-size: 30px;
+}
+
+.botonResta {
+  background-color: rgb(239, 2, 2);
+}
+
+.botonSuma {
+  background-color: rgb(4, 240, 4);
+
 }

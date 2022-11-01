@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-const Contador = ({stock}) => {
+const ItemCount = ({stock}) => {
     const [cantidad, setCantidad] = useState (0);
 
-    const sumar = () => {
+    const onAdd = () => {
         if (cantidad < stock ) {
             setCantidad (cantidad + 1);
         }
@@ -18,11 +18,11 @@ const Contador = ({stock}) => {
        
   return (
     <div className='contador'>
-         <button disabled ={cantidad === 0} onClick={restar}>-</button>
+         <button className= "botonResta"disabled ={cantidad === 0} onClick={restar}>-</button>
         <p>{cantidad}</p>
-        <button disabled ={cantidad === stock} onClick={sumar}>+</button>
+        <button className='botonSuma' disabled ={cantidad === stock} onClick={onAdd}>+</button>
     </div>
   )
 }
 
-export default Contador
+export default ItemCount
