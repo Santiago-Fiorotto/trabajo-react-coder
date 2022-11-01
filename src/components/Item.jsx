@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 
-const Item = (producto) => {
+const Item = ({producto}) => {
   return (
     <div>
         <div>
