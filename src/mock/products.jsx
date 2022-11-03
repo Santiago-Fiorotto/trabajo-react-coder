@@ -35,3 +35,13 @@ export const getProducts = (categoryName) =>{
       }, 2000);
   });//NEW PROMISE
  }; //GET PRODUCTS
+
+//PARA EL DETAIL CONTAINER
+ export const getProduct = (idProd) => {
+    return new Promise((res, rej) => {
+        const product = products.find((prod) => prod.id === +idProd);
+        setTimeout(() => {
+            res(product);
+        }, 2000);
+    });
+};

@@ -1,32 +1,23 @@
 import React, {useEffect, useState}from 'react';
-import { products } from '../mock/products';
+import { getProduct } from '../mock/products';
 import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
 
   const [item, setItem] = useState ({});
-
+  const {idProd} = useParams();
+  
   useEffect (()=>{
-
-   const getProduct = () =>{
-      return new Promise ((res,rej) => {
-        const product = products.find((prod)=>prod.id === 3)
-        setTimeout (()=>{
-          console.log (product)
-          res (product);
-        }, 2000)
-        
-      });//NEW PROMISE
-
-    } //GET PRODUCTS
-    getProduct().then((res) => {
+    getProduct(idProd)
+    .then((res) => {
       setItem (res)
       console.log (res);
     }).catch((error) => {
       console.log ("Hubo un error")
     });
 
-  }, []) //USE EFFECT
+  }, [idProd]) //USE EFFECT
 
 
 
