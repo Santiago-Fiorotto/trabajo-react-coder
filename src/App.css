@@ -31,15 +31,6 @@
   justify-content: center;
 }
 
-/* GREETING */
-.greeting {
-  font-size: 40px;
-  color: black;
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  font-family: cursive;
-}
 
 /* CONTADOR */
 
@@ -58,4 +49,27 @@
 .botonSuma {
   background-color: rgb(4, 240, 4);
 
+}
+
+/* ITEM LIST CONTAINER*/
+.itemList {
+  display: flex;
+  justify-content: center;
+}
+.productoImagen {
+  max-height: 300px;
+  max-width: auto;
+}
+
+.productoDescripcion{
+ font-size: 25px;
+}
+
+/* ITEM DETAIL CONTAINER*/
+
+.itemDetail{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
 }
