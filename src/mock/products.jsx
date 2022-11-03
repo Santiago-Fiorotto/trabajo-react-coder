@@ -25,3 +25,13 @@ export const products = [
     img: `https://res.cloudinary.com/djjmhiwzd/image/upload/v1667259552/LUNARES_CRUZADASremovebg-preview_urru2r.png`,
 }
 ];
+//el categoryName de export const getProducts = (categoryName) =>{ podría ser cualquiér nombre
+export const getProducts = (categoryName) =>{
+    return new Promise ((res,rej) => {
+      const prodFiltrados = products.filter ((prod) => prod.category === categoryName);
+      const ref = categoryName ? prodFiltrados : products;
+      setTimeout (()=>{
+        res (ref);
+      }, 2000);
+  });//NEW PROMISE
+ }; //GET PRODUCTS
