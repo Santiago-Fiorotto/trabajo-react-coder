@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/carrito/Cart';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Footer from './components/Footer';
 
 
 
@@ -28,7 +29,7 @@ function App() {
           path='/cart'
           element={<Cart/>}/>
       </Routes>
-
+      <Footer/>
     </div>
     </BrowserRouter>
   );
