@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/carrito/Cart';
+import Form from './components/Form';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Footer from './components/Footer';
 
@@ -28,6 +29,9 @@ function App() {
           <Route
           path='/cart'
           element={<Cart/>}/>
+                <Route
+          path='/contacto'
+          element={<Form/>}/>
       </Routes>
       <Footer/>
     </div>

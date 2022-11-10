@@ -31,6 +31,16 @@
   justify-content: center;
 }
 
+.dropdown-menu {
+  background-color: rgb(113, 111, 111);
+  font-size: 100%;
+  color: black;
+  border: none;
+}
+
+.dropdown-menu:hover {
+  background-color: rgb(176, 175, 175);
+}
 
 /* CONTADOR */
 
