@@ -9,7 +9,7 @@ const ItemListContainer = () => {
   const {categoryName} = useParams();
 
   useEffect (()=>{
-    getProducts(categoryName)
+  getProducts(categoryName)
     .then((res) => {
       setItems (res);
     }).catch((error) => {
