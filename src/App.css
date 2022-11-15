@@ -62,17 +62,17 @@
 }
 
 /* ITEM LIST CONTAINER*/
-.itemList {
-  display: flex;
-  justify-content: center;
-}
-.productoImagen {
-  max-height: 300px;
-  max-width: auto;
+
+.card {
+ width: 20rem;
+ max-height: 30rem;
+  margin: 5px;
+  border: solid black 3px;
 }
 
-.productoDescripcion{
- font-size: 25px;
+.card-img-top {
+  min-height: 310px;
+  max-width: 500px;
 }
 
 /* ITEM DETAIL CONTAINER*/
@@ -104,3 +104,4 @@
  padding-right: 15px;
  font-size: 30px;
 }
+

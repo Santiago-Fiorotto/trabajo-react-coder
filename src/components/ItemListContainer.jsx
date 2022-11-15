@@ -19,7 +19,7 @@ const ItemListContainer = () => {
 
 
   return (
-    <div>
+    <div className='row mx-5'>
       <ItemList items= {items}/>
       </div>
     
