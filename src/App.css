@@ -62,12 +62,22 @@
 }
 
 /* ITEM LIST CONTAINER*/
+.fondo {
+  background-color: rgb(233, 231, 231); 
+  margin-top: 40px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
 
 .card {
- width: 20rem;
- max-height: 30rem;
-  margin: 5px;
+  padding: auto;
+  width: 20rem;
+  min-height: 32rem;
+  max-height: 32rem;
+  border-radius: 10px;
   border: solid black 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card-img-top {
@@ -75,13 +85,47 @@
   max-width: 500px;
 }
 
+.linkVerDetalles{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 /* ITEM DETAIL CONTAINER*/
+.contenedorItemDetail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .itemDetail{
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  
+  border-radius: 10px;
+  border: solid black 2px;
+  margin: 20px; 
+  background-color: rgb(233, 231, 231); 
+}
+
+.imagenDetailContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.productoDescripcion {
+  display: flex;
+  justify-content: center;
+}
+
+/*FORMULARIO*/
+
+.formulario {
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 3px black;
+  background-color: rgb(233, 231, 231); 
 }
 
 /*FOOTER*/
@@ -104,4 +148,3 @@
  padding-right: 15px;
  font-size: 30px;
 }
-

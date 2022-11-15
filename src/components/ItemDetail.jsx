@@ -10,14 +10,16 @@ const ItemDetail = ({item}) => {
     setShow (false);
   }
   return (
-    <div className='itemDetail'>
+  <div className='container itemDetail'>
       <div className='container'>
+      <h2 className='productoDescripcion' >{item.title}</h2>
+      <h2 className='productoDescripcion'>${item.price}.-</h2>
+        <div className='imagenDetailContainer'>
         <img className='productoImagen' src={item.img} alt={item.title}/>
+        </div>
         <article>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente id debitis incidunt explicabo repellendus officiis recusandae hic quo corporis ad odio autem quia quibusdam natus, quos in laborum eligendi dolorum.
           </p>
-         <h2 className='productoDescripcion' >{item.title}</h2>
-         <h3 className='productoDescripcion'>${item.price}.-</h3>
         </article>
       </div>
       {show ? (<ItemCount stock= {5} onAdd={onAdd}/>) : (
@@ -25,8 +27,6 @@ const ItemDetail = ({item}) => {
       <button className='btn btn-dark'>IR AL CARRITO</button>
       </>
       )}
-    
-      
     </div>
   )
 }
