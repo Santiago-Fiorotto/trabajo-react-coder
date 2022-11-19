@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getProducts} from '../mock/products'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import PulseLoader from "react-spinners/PulseLoader";
 
 const ItemListContainer = () => {
   
@@ -24,7 +25,7 @@ const ItemListContainer = () => {
   }, [categoryName]) ;//USE EFFECT
 
   if (loading) {
-    return <h1>Cargando..</h1>
+    return <PulseLoader/>
   }
   return (
     <div className='row mx-5'>

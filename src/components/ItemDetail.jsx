@@ -27,7 +27,7 @@ const ItemDetail = ({item}) => {
           </p>
         </article>
       </div>
-      {show ? (<ItemCount stock= {5} onAdd={onAdd}/>) : (
+      {show ? (<ItemCount stock= {item.stock} onAdd={onAdd}/>) : (
       <> 
       <Link className='btn btn-dark' to="/cart">IR AL CARRITO</Link>
       </>

@@ -1,19 +1,14 @@
 import React, { useState } from 'react'
 
 const ItemCount = ({stock, onAdd}) => {
-    const [cantidad, setCantidad] = useState (0);
+    const [cantidad, setCantidad] = useState (1);
 
     const sumar = () => {
-        if (cantidad < stock ) {
-            setCantidad (cantidad + 1);
-        }
- 
+        cantidad < stock && setCantidad (cantidad+1);
     }
 
     const restar = () => {
-        if (cantidad > 0) {
-            setCantidad (cantidad - 1);
-        }
+        cantidad > 1 && setCantidad (cantidad-1);
         };
         const agregar  = () =>{
             onAdd(cantidad);

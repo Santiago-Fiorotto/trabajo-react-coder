@@ -2,6 +2,9 @@ import React, {useEffect, useState}from 'react';
 import { getProduct } from '../mock/products';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 const ItemDetailContainer = () => {
 
@@ -25,7 +28,7 @@ const ItemDetailContainer = () => {
   }, [idProd]) //USE EFFECT
 
   if (loading) {
-    return <h1>Cargando...</h1>
+    return <Skeleton count={10} width={200} height={30}/>
   };
 
 
