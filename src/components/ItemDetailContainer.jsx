@@ -7,19 +7,26 @@ const ItemDetailContainer = () => {
 
   const [item, setItem] = useState ({});
   const {idProd} = useParams();
+  const [loading, setLoading] = useState (true);
   
   useEffect (()=>{
     getProduct(idProd)
     .then((res) => {
       setItem (res)
       
-    }).catch((error) => {
+    })
+    .catch((error) => {
       console.log ("Hubo un error")
+    })
+    .finally(() =>{
+      setLoading(false);
     });
 
   }, [idProd]) //USE EFFECT
 
-
+  if (loading) {
+    return <h1>Cargando...</h1>
+  };
 
 
   return (

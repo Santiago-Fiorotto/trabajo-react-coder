@@ -7,17 +7,25 @@ const ItemListContainer = () => {
   
   const [items, setItems] = useState ([]);
   const {categoryName} = useParams();
+  const [loading, setLoading] = useState(true);
 
   useEffect (()=>{
   getProducts(categoryName)
     .then((res) => {
       setItems (res);
-    }).catch((error) => {
+    })
+    .catch((error) => {
       console.log ("Hubo un error")
-    });
-  }, [categoryName]) //USE EFFECT
+    })
+    .finally(()=>{
+      setLoading (false)
+    })
+    return setLoading(true);
+  }, [categoryName]) ;//USE EFFECT
 
-
+  if (loading) {
+    return <h1>Cargando..</h1>
+  }
   return (
     <div className='row mx-5'>
       <ItemList items= {items}/>
