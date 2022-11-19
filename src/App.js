@@ -6,12 +6,13 @@ import Cart from './components/carrito/Cart';
 import Form from './components/Form';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Footer from './components/Footer';
-
+import CartProvider from './context/CartContext';
 
 
 function App() {
   return (
     <BrowserRouter>
+   <CartProvider>
     <div className="App">
       <NavBar/>
       <Routes>
@@ -35,6 +36,9 @@ function App() {
       </Routes>
       <Footer/>
     </div>
+   </CartProvider>
+    
+    
     </BrowserRouter>
   );
 }
