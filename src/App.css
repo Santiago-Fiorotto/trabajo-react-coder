@@ -29,7 +29,9 @@
   display: flex;
   font-size: 50px;
   justify-content: center;
+  color: black;
 }
+
 
 .dropdown-menu {
   background-color: rgb(113, 111, 111);
