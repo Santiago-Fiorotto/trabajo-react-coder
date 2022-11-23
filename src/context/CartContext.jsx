@@ -62,11 +62,14 @@ const CartProvider = ({children}) => {
         return count
     };
 
+    const cantidadDelProducto = (id) => {
+        const product = cart.find ((prod) => prod.id === id)
+        return product?.cantidad
+    };
 
 
-    console.log (cart);
     return (
-        <CartContext.Provider value={{cart , addToCart, deleteAll, deleteOne, totalUnidades, totalPrecio}}>
+        <CartContext.Provider value={{cart , addToCart, deleteAll, deleteOne, totalUnidades, totalPrecio, cantidadDelProducto}}>
            {children}
         </CartContext.Provider>
 
