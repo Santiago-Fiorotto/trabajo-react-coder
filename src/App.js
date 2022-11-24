@@ -33,6 +33,9 @@ function App() {
                 <Route
           path='/contacto'
           element={<Form/>}/>
+          <Route
+          path='/checkout'
+          element={<Form/>}/>
       </Routes>
       <Footer/>
     </div>

@@ -1,8 +1,31 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import CartWidget from './CartWidget'
+import React, { useEffect } from 'react'
+import { NavLink } from 'react-router-dom';
+import CartWidget from './CartWidget';
+import {collection, getDocs} from "firebase/firestore";
+import { useState } from 'react';
+import { db } from '../services/firebaseConfig';
 
 const NavBar = () => {
+  const [categories, setCategories] = useState ([]);
+
+  useEffect(()=>{
+    const catCollection = collection(db, `categoriasNavBar`);
+
+    getDocs(catCollection)
+  .then((res)=>{
+    const secciones = res.docs.map((prod)=>{
+      return {
+        id: prod.id,
+        ...prod.data(),
+      };
+    });
+    setCategories(secciones);
+  })
+  .catch((error)=>{})
+  },[]); 
+
+
+
   return (
  <div>
     <nav className="navbar navbar-expand-lg navbar-light ">
@@ -26,8 +49,10 @@ const NavBar = () => {
             PRODUCTOS
           </NavLink>
           <ul className="dropdown-menu">
-            <li><NavLink to="/productos/category/dama" className="dropdown-item">DAMA</NavLink></li>
-            <li><NavLink to="productos/category/caballero" className="dropdown-item">CABALLERO</NavLink></li>
+            {
+              categories.map((cat)=>(
+                <li><NavLink key={cat.id} to={`/productos/category/${cat.path}` }className="dropdown-item">{cat.category}</NavLink></li>
+              ))}
           </ul>
         </li>
         <li className="nav-item">

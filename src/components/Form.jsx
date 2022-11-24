@@ -1,12 +1,44 @@
 import React from 'react'
-import { useState } from 'react'
+import { useContext } from 'react';
+import { useState } from 'react';
+import { CartContext } from '../context/CartContext';
+import {addDoc, collection, serverTimestamp} from "firebase/firestore";
+import { db } from '../services/firebaseConfig';
 
 const Form = () => {
     const [name,setName] = useState ("");
     const [lastName,setLastName] = useState ("");
+    const [orderId, setOrderId] = useState("");
+
+    const {cart, totalPrecio, deleteAll} = useContext(CartContext);
+    const totalCarrito = totalPrecio();
 
     const enviarDatos = (e) => {
         e.preventDefault ();
+        const objOrden = {
+          buyer: {
+            name,
+            lastName,
+            telefono: 3027529735,
+            direccion: "Este y  arriba reemplazar por estados como name y lastName",
+            email: "lo mismo que la dirección",
+          },
+          items: cart,
+          total: totalCarrito,
+          date: serverTimestamp(),
+        };
+        const orderCollection = collection (db, "orders" );
+        addDoc(orderCollection, objOrden)
+        .then((res)=>{
+          setOrderId(res.id);
+          deleteAll();
+        })
+        .catch((error)=>{
+
+        })
+        .finally(()=>{
+
+        })
     };
 
     const handleName = (e) => {
@@ -15,6 +47,10 @@ const Form = () => {
     const handleLastName = (e) => {
         setLastName (e.target.value)
     };
+
+    if (orderId) {
+      return (<h2>Gracias por tu compra !! Te dejamos tu número de pedido por cualquier consulta que quiera realizar. {orderId} </h2>);
+    }
 
   return (
     <form className='formulario container' onSubmit={enviarDatos}>

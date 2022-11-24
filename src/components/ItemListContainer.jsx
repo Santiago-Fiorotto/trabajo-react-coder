@@ -15,10 +15,11 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect (() => { 
+      const ref = categoryName 
+      ? query(collectionProd, where(`category`,`==`, categoryName))
+      : collectionProd;
 
-    //const q = query(collectionProd, where(`category`,`==`, categoryName));
-
-    getDocs(collectionProd)
+    getDocs(ref)
     .then((res)=>{
       const products = res.docs.map((prod)=>{
         return {
@@ -33,17 +34,6 @@ const ItemListContainer = () => {
       setLoading(false);
     });
 
-
-  /*getProducts(categoryName)
-    .then((res) => {
-      setItems (res);
-    })
-    .catch((error) => {
-      console.log ("Hubo un error")
-    })
-    .finally(()=>{
-      setLoading (false)
-    })*/
     return () => setLoading(true);
   }, [categoryName]) ;//USE EFFECT
 

@@ -5,7 +5,7 @@ export const products = [
     price: 1630,
     stock: 10,
     category: `dama`,
-    img: `https://res.cloudinary.com/djjmhiwzd/image/upload/v1667259554/VERANO_COMUNES_vlmjcu.png`,
+    img: `https://res.cloudinary.com/djjmhiwzd/image/upload/v1669244037/comprimida_VERANO_COMUNES_excqpp.png`,
 },
 {
     id: 2,
