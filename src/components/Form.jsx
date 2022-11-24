@@ -23,9 +23,9 @@ const Form = () => {
           buyer: {
             name,
             lastName,
-            telefono: 3027529735,
-            direccion: "Este y  arriba reemplazar por estados como name y lastName",
-            email: "lo mismo que la dirección",
+            telefono,
+            direccion,
+            mailUno,
           },
           items: cart,
           total: totalCarrito,
