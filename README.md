@@ -26,6 +26,10 @@ Como se detalló anteriormente, es un e-commerce. En el se podrá visualizar los
 
 - [Bootstrap](https://getbootstrap.com): Si bien Bootstrap tiene varias funcionalidades, en este proyecto en particular, fue utilizada para dar formato a los botones de manera rápida y, sobre todo, para hacer un diseño responsive de manera eficaz y rápida.
 
+- [Firebase](https://firebase.google.com/?hl=es-419&gclid=CjwKCAiAyfybBhBKEiwAgtB7fnkAyZhrStzgtL2Iv0zB7q1oK21CsQ9fb9f-yMfCHnT1gPRNAPQt3hoCkf4QAvD_BwE&gclsrc=aw.ds): Para este proyecto, se utilizó una de las herramientas que tiene Firebase que es Firestore. Estaa fue usada como base de datos. De esta manera podemos crear una app, sin necesidad de tener conocimientos de Backend. 
+
+- [Cloudinary](https://cloudinary.com): Está página permite subir las imágenes que necesitemos a la nube y luego utilizarlas en el proyecto.
+
 
 ## Pasos para levantar el proyecto en local:
 
