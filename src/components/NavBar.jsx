@@ -41,9 +41,6 @@ const NavBar = () => {
         <li className="nav-item">
           <NavLink to="/" className="nav-link active" aria-current="page">INICIO</NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink to="/nosotros" className="nav-link active">NOSOTROS</NavLink>
-        </li>
         <li className="nav-item active dropdown">
           <NavLink to="/productos" className="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             PRODUCTOS

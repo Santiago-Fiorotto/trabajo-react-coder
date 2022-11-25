@@ -41,7 +41,7 @@ const ItemListContainer = () => {
     return <PulseLoader/>
   }
   return (
-    <div className='row mx-5'>
+    <div className='container'>
       <ItemList items= {items}/>
       </div>
     

@@ -7,6 +7,7 @@ import Form from './components/Form';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Footer from './components/Footer';
 import CartProvider from './context/CartContext';
+import Contacto from './components/Contacto';
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
           element={<Cart/>}/>
                 <Route
           path='/contacto'
-          element={<Form/>}/>
+          element={<Contacto/>}/>
           <Route
           path='/checkout'
           element={<Form/>}/>
