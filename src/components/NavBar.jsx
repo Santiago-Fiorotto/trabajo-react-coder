@@ -56,10 +56,10 @@ const NavBar = () => {
           <NavLink to="/contacto" className="nav-link active" >CONTACTO</NavLink>
         </li> 
       </ul>
-      <div className="cartWidget">
+    </div>
+    <div className="cartWidget">
           <NavLink to="/cart" className="nav-link active"><CartWidget/></NavLink> 
         </div>
-    </div>
   </div>
 </nav>
  </div>

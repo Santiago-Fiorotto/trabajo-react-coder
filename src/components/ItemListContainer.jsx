@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-//import { getProducts} from '../mock/products'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import PulseLoader from "react-spinners/PulseLoader";
@@ -38,7 +37,12 @@ const ItemListContainer = () => {
   }, [categoryName]) ;//USE EFFECT
 
   if (loading) {
-    return <PulseLoader/>
+    return <PulseLoader
+    color="rgba(0, 0, 0, 1)"
+    margin={30}
+    size={40}
+    speedMultiplier={1}
+  />
   }
   return (
     <div className='container'>

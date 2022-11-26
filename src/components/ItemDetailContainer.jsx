@@ -1,5 +1,4 @@
 import React, {useEffect, useState}from 'react';
-//import { getProduct } from '../mock/products';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton'
@@ -31,22 +30,12 @@ const ItemDetailContainer = () => {
     })
 
 
-   /* getProduct(idProd)
-    .then((res) => {
-      setItem (res)
-      
-    })
-    .catch((error) => {
-      console.log ("Hubo un error")
-    })
-    .finally(() =>{
-      setLoading(false);
-    });*/
-
-  }, [idProd]) //USE EFFECT
+  }, [idProd])
 
   if (loading) {
-    return <Skeleton count={10} width={200} height={30}/>
+    return <div className='skeleton'>
+      <Skeleton count={10} width={1000} height={50}/>
+      </div>
   };
 
 

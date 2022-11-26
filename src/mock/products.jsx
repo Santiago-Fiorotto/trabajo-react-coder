@@ -25,7 +25,7 @@ export const products = [
     img: `https://res.cloudinary.com/djjmhiwzd/image/upload/v1667259552/LUNARES_CRUZADASremovebg-preview_urru2r.png`,
 }
 ];
-//el categoryName de export const getProducts = (categoryName) =>{ podría ser cualquiér nombre
+
 export const getProducts = (categoryName) =>{
     return new Promise ((res,rej) => {
       const prodFiltrados = products.filter ((prod) => prod.category === categoryName);
@@ -33,10 +33,10 @@ export const getProducts = (categoryName) =>{
       setTimeout (()=>{
         res (ref);
       }, 2000);
-  });//NEW PROMISE
- }; //GET PRODUCTS
+  });
+ }; 
 
-//PARA EL DETAIL CONTAINER
+
  export const getProduct = (idProd) => {
     return new Promise((res, rej) => {
         const product = products.find((prod) => prod.id === +idProd);
