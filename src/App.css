@@ -179,3 +179,44 @@
   max-width: 80%;
   padding-left: 20%;
 }
+
+.ubi {
+  margin-top: 2%;
+  border: solid black 1px;
+}
+
+.ubi-text{
+  display: flex;
+  justify-content: center;
+  font-family:'Courier New', Courier, monospace;
+  padding: 1%;
+}
+
+.ubi-foto{
+  display: flex;
+  justify-content: center;
+  max-height: 90%;
+  padding: 2%;
+}
+
+.carrito-vista {
+  background-color: rgb(233, 231, 231);
+}
+
+.carrito-contenedor{
+  background-color: rgb(233, 231, 231);
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  
+}
+
+.botones-carrito {
+  display: flex;
+justify-content: center;
+}
+
+.precio-carrito {
+  display: flex;
+  justify-content: center;
+}
