@@ -7,7 +7,7 @@ El mismo se trata de un e-commerce de pantuflas. Fue ideado en base a un emprend
 
 La app fue inicializada mediante [Create React App](https://github.com/facebook/create-react-app). Esta herramienta permite agilizar mucho los tiempos, ya que tiene pre cargados un monton de archivos que son útiles para la creación del proyecto que se quiera realizar.
 
-En el siguiente link, podrá ver el proyecto deployado [www.PROYECTO.COM](url de la pág).
+En el siguiente link, podrá ver el proyecto deployado [https://trabajo-react-coder.vercel.app/](https://trabajo-react-coder.vercel.app/).
 
 
 ## Funcionalidades que tiene el proyecto: 

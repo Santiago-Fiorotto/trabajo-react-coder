@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-/*NAVBAR*/
+
 .logoFika {
   width: 80px;
 
@@ -44,7 +44,6 @@
   background-color: rgb(176, 175, 175);
 }
 
-/* CONTADOR */
 
 .contador {
   display: flex;
